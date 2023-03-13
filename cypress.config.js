@@ -8,6 +8,6 @@ viewportWidth: 1200,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'http://simpletestsite.fabrykatestow.pl/'
+    baseUrl: 'https://tapsshop.pl/'
   }
 });
