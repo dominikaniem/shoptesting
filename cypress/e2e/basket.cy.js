@@ -5,7 +5,7 @@ describe('it should test basket', () => {
     const homePage = new HomePage();
     const cartPage = new CartPage();
 
-it('should add product to cart and delete from there' , function(){
+it('should add product to cart and delete from new' , function(){
     homePage.visitPage(),
     homePage.addProductToCart(),
     homePage.clickGoToCartFromProductButton(),
@@ -13,4 +13,13 @@ it('should add product to cart and delete from there' , function(){
     cartPage.removeItemFromCart(),
     cartPage.checkThatCartIsEmpty()
     })
+
+it('should add product to cart and delete from top' , function(){
+        homePage.visitPage(),
+        homePage.addTopProductToCart(),
+        homePage.clickGoToCartFromTopRated(),
+        cartPage.checkThatAddedTopProductIsInCart(),
+        cartPage.removeItemFromCart(),
+        cartPage.checkThatCartIsEmpty()
+        })
 })

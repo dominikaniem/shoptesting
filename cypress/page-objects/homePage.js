@@ -1,6 +1,7 @@
 import Urls from "./urls";
 const myAccountHeaderButton = '#menu-item-100'
 const dataBlockNameNew = 'div[data-block-name="woocommerce/product-new"]'
+const dataBlockNameTop = 'div[data-block-name="woocommerce/product-top-rated"]'
 const checkCartFromProductLevel = '.added_to_cart.wc-forward'
 
 export const Product = { 
@@ -21,7 +22,22 @@ export const Product = {
     
 }
 
-class HomePage{
+export const TopRated = { 
+    HoodieWithLogo: {
+    Locator: 'a[data-product_id="44"]',
+    Name: 'Hoodie with Logo'
+    },
+
+    Longsleeve: {
+    Locator:'a[data-product_id="52"]',
+    Name: 'Long Sleeve Tee' 
+    },
+}
+// jak wybrać produkt z ulubionych? Mają te same id, nie wchodzi mi ten obiekt dla produktów z sekcji 'ulubione' NVM
+
+
+
+class HomePage {
 
     clickMyAccountHeaderButton() {
         cy.get(myAccountHeaderButton).click()
@@ -37,10 +53,23 @@ class HomePage{
             cy.get(Product.HoodieWithZipper.Locator).click()
         })
     }
+    
     clickGoToCartFromProductButton(){
         cy.get(dataBlockNameNew).within(()=>{
         cy.get(checkCartFromProductLevel).click()
-    })
-}}
-
+     })
+    }
+    
+    addTopProductToCart(){
+        cy.get(dataBlockNameTop).within(()=>{
+            cy.get(TopRated.HoodieWithLogo.Locator).click()
+        })
+        
+    }
+    clickGoToCartFromTopRated(){
+        cy.get(dataBlockNameTop).within(()=>{
+        cy.get(checkCartFromProductLevel).click()
+         })
+    }
+}
 export default HomePage;
