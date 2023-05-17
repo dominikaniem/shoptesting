@@ -33,9 +33,6 @@ export const TopRated = {
     Name: 'Long Sleeve Tee' 
     },
 }
-// jak wybrać produkt z ulubionych? Mają te same id, nie wchodzi mi ten obiekt dla produktów z sekcji 'ulubione' NVM
-
-
 
 class HomePage {
 

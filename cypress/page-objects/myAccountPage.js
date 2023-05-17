@@ -18,7 +18,6 @@ class AccountPage{
         cy.get(myAccountNavigation).should('be.visible')
     }
 
-
     checkVisibilityOfLoginError(){
         cy.get(errorAfterWrongLogin).should('be.visible')
     }
@@ -31,9 +30,6 @@ class AccountPage{
     const urls = new Urls
     urls.visytMyAccountPage
     }
-
-
-
 }
 
-export default AccountPage
+export default AccountPage 

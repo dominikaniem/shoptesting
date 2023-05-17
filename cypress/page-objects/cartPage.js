@@ -1,8 +1,10 @@
 import { Product } from "./homePage";
 import { TopRated } from "./homePage";
+
 const productName = '.product-name'
 const removeItemButton = '.remove'
 const emptyCartAlert = '.cart-empty.woocommerce-info'
+const goToPaymentsButton = '.wc-proceed-to-checkout'
 
 
 class CartPage{
@@ -18,5 +20,10 @@ removeItemFromCart(){
 }
 checkThatCartIsEmpty(){
     cy.get(emptyCartAlert).should('exist')
+}
+
+proceedToPayment(){
+    cy.get(goToPaymentsButton).click()
 }}
+
 export default CartPage;
