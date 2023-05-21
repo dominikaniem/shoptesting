@@ -12,7 +12,6 @@ describe('Online Shop test automation', () => {
     })
 
 
-
     it('should login to the application' , function () {
         homePage.visitPage()
         homePage.clickMyAccountHeaderButton()

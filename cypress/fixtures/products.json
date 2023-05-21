@@ -1,17 +1,18 @@
+
 {
-    "HoodieWithZipper": {
-    "Locator":"a[data-product_id='51']",
+    "HoodieWithZipper" : {
+    "Locator": "a[data-product_id='51']",
     "Name": "Hoodie with Zipper"
     },
-   
-   "Sunglases": {
-    "Locator":"a[data-product_id='49']",
-    "Name":"Sunglasses" 
-   },
+
+    "Sunglasses": {
+    "Locator": "a[data-product_id='49']",
+    "Name": "Sunglasses"
+},
+       
+    "Polo": { 
+    "Locator": "a[data-product_id='53']",
+    "Name": "Polo"
     
-    "Polo": {
-    "Locator":"a[data-product_id='53']",
-    "Name":"Polo"
     }
-    
 }
