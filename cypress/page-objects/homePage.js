@@ -4,22 +4,22 @@ const dataBlockNameNew = 'div[data-block-name="woocommerce/product-new"]'
 const dataBlockNameTop = 'div[data-block-name="woocommerce/product-top-rated"]'
 const checkCartFromProductLevel = '.added_to_cart.wc-forward'
 
-export const Product = { 
+export const Product = {
     HoodieWithZipper: {
-    Locator: 'a[data-product_id="51"]',
-    Name: 'Hoodie with Zipper'
-    },
-
-    Sunglasess: {
-    Locator:'a[data-product_id="49"]',
-    Name: 'Sunglasses' 
-    },
+        Locator: 'a[data-product_id="51"]',
+        Name: 'Hoodie with Zipper'
+        },
     
-    Polo: {
-    Locator: 'a[data-product_id="53"]',
-    Name: 'Polo'
+    Sunglasses: {
+        Locator: 'a[data-product_id="49"]',
+        Name: 'Sunglasses'
     },
-    
+           
+    Polo: { 
+Locator: 'a[data-product_id="53"]',
+        Name: 'Polo'
+    }
+        
 }
 
 export const TopRated = { 
