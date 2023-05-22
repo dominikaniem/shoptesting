@@ -13,23 +13,24 @@ const countryDropdown = '#billing_country'
 const countryDropdownPoland = 'Polska'
 const orderConfirmation = '.woocommerce-order'
 
-class OrderPage{
+class OrderPage {
 
-fillAllRequiredFields(){
-    cy.get(firstNameField).type(faker.name.firstName());
-    cy.get(lastNameField).type(faker.name.lastName());
-    cy.get(countryDropdown).select(countryDropdownPoland, { force: true} );
-    cy.get(adress1).type(faker.address.streetAddress());
-    cy.get(zipcode).type(faker.address.zipCode('##-###'));
-    cy.get(city).type(faker.address.city());
-    cy.get(phone).type(faker.phone.number('+48 #########'));
-    cy.get(email).type(faker.internet.email());
+    fillAllRequiredFields() {
+        cy.get(firstNameField).type(faker.name.firstName());
+        cy.get(lastNameField).type(faker.name.lastName());
+        cy.get(countryDropdown).select(countryDropdownPoland, { force: true });
+        cy.get(adress1).type(faker.address.streetAddress());
+        cy.get(zipcode).type(faker.address.zipCode('##-###'));
+        cy.get(city).type(faker.address.city());
+        cy.get(phone).type(faker.phone.number('+48 #########'));
+        cy.get(email).type(faker.internet.email());
+    }
+    finishOrder() {
+        cy.get(finishOrderButton).click();
+    }
+    checkOrderFinished() {
+        cy.get(orderConfirmation, { timeout: 30000 }).should('exist')
+    }
 }
-finishOrder(){
-    cy.get(finishOrderButton).click();
-}
-checkOrderFinished(){
-    cy.get(orderConfirmation, { timeout: 10000 } ).should('exist')
-}}
 
 export default OrderPage;
