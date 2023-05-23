@@ -7,23 +7,24 @@ const emptyCartAlert = '.cart-empty.woocommerce-info'
 const goToPaymentsButton = '.wc-proceed-to-checkout'
 
 
-class CartPage{
+class CartPage {
 
-checkThatAddedProductIsInCart(){
-    cy.get(productName).contains(Product.HoodieWithZipper.Name).should('exist')
-}
-checkThatAddedTopProductIsInCart(){
-    cy.get(productName).contains(TopRated.HoodieWithLogo.Name).should('exist')
-}
-removeItemFromCart(){
-    cy.get(removeItemButton).click()
-}
-checkThatCartIsEmpty(){
-    cy.get(emptyCartAlert).should('exist')
-}
+    checkThatAddedProductIsInCart() {
+        cy.get(productName).contains(Product.HoodieWithZipper.Name).should('exist')
+    }
+    checkThatAddedTopProductIsInCart() {
+        cy.get(productName).contains(TopRated.HoodieWithLogo.Name).should('exist')
+    }
+    removeItemFromCart() {
+        cy.get(removeItemButton).click()
+    }
+    checkThatCartIsEmpty() {
+        cy.get(emptyCartAlert).should('exist')
+    }
 
-proceedToPayment(){
-    cy.get(goToPaymentsButton).click()
-}}
+    proceedToPayment() {
+        cy.get(goToPaymentsButton).click()
+    }
+}
 
 export default CartPage;

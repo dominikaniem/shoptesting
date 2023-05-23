@@ -8,29 +8,29 @@ export const Product = {
     HoodieWithZipper: {
         Locator: 'a[data-product_id="51"]',
         Name: 'Hoodie with Zipper'
-        },
-    
+    },
+
     Sunglasses: {
         Locator: 'a[data-product_id="49"]',
         Name: 'Sunglasses'
     },
-           
-    Polo: { 
-Locator: 'a[data-product_id="53"]',
+
+    Polo: {
+        Locator: 'a[data-product_id="53"]',
         Name: 'Polo'
     }
-        
+
 }
 
-export const TopRated = { 
+export const TopRated = {
     HoodieWithLogo: {
-    Locator: 'a[data-product_id="44"]',
-    Name: 'Hoodie with Logo'
+        Locator: 'a[data-product_id="44"]',
+        Name: 'Hoodie with Logo'
     },
 
     Longsleeve: {
-    Locator:'a[data-product_id="52"]',
-    Name: 'Long Sleeve Tee' 
+        Locator: 'a[data-product_id="52"]',
+        Name: 'Long Sleeve Tee'
     },
 }
 
@@ -38,35 +38,35 @@ class HomePage {
 
     clickMyAccountHeaderButton() {
         cy.get(myAccountHeaderButton).click()
-    } 
+    }
 
     visitPage() {
         const urls = new Urls
         urls.visitHomePage()
     }
 
-    addProductToCart(){
-        cy.get(dataBlockNameNew).within(()=>{
+    addProductToCart() {
+        cy.get(dataBlockNameNew).within(() => {
             cy.get(Product.HoodieWithZipper.Locator).click()
         })
     }
-    
-    clickGoToCartFromProductButton(){
-        cy.get(dataBlockNameNew).within(()=>{
-        cy.get(checkCartFromProductLevel).click()
-     })
+
+    clickGoToCartFromProductButton() {
+        cy.get(dataBlockNameNew).within(() => {
+            cy.get(checkCartFromProductLevel).click()
+        })
     }
-    
-    addTopProductToCart(){
-        cy.get(dataBlockNameTop).within(()=>{
+
+    addTopProductToCart() {
+        cy.get(dataBlockNameTop).within(() => {
             cy.get(TopRated.HoodieWithLogo.Locator).click()
         })
-        
+
     }
-    clickGoToCartFromTopRated(){
-        cy.get(dataBlockNameTop).within(()=>{
-        cy.get(checkCartFromProductLevel).click()
-         })
+    clickGoToCartFromTopRated() {
+        cy.get(dataBlockNameTop).within(() => {
+            cy.get(checkCartFromProductLevel).click()
+        })
     }
 }
 export default HomePage;

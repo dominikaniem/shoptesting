@@ -1,4 +1,3 @@
-
 import HomePage from "../page-objects/homePage";
 import AccountPage from "../page-objects/myAccountPage";
 import CartPage from "../page-objects/cartPage";
@@ -26,7 +25,6 @@ describe('Online Shop test automation', () => {
         accountPage.clickLoginButton()
         accountPage.checkVisibilityOfLoginError()
     });
-
 
     it('should login to the application', function () {
         homePage.visitPage()

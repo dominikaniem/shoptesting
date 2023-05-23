@@ -1,12 +1,12 @@
 class Urls {
-    visitHomePage(){
+    visitHomePage() {
         const url = '/'
         cy.visit(url)
     }
 
-    visytMyAccountPage(){
+    visytMyAccountPage() {
         const url = '/?page_id=9'
         cy.visit(url)
     }
- }
- export default Urls
+}
+export default Urls
