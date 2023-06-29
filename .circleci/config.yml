@@ -25,5 +25,4 @@ workflows:
               - cypress/install
             store_artifacts: true
             spec: cypress/e2e/shoptest.cy.js
-            parallel: true
             parallelism: 4
