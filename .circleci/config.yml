@@ -6,6 +6,8 @@ workflows:
     jobs:
         - cypress/install
         - cypress/run:
+            requires: 
+              - cypress/install
             store_artifacts: true
             spec: cypress/e2e/login.cy.js
         - cypress/run:
