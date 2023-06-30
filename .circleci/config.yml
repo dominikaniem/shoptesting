@@ -5,19 +5,25 @@ workflows:
   build:
     jobs:
         - cypress/install
-        - cypress run --record
+        - cypress/run:
+            requires: 
+              - cypress/install
             store_artifacts: true
             spec: cypress/e2e/login.cy.js
-        # - cypress/run:
-        #     requires: 
-        #       - cypress/install
-        #     spec: cypress/e2e/basket.cy.js
-        # - cypress/run:
-        #     requires: 
-        #       - cypress/install
-        #     spec: cypress/e2e/order.cy.js
-        # - cypress/run:
-        #     requires: 
-        #       - cypress/install
-        #     spec: cypress/e2e/shoptest.cy.js
-            parallelism: 4
+        - cypress/run:
+            requires: 
+              - cypress/install
+            store_artifacts: true
+            spec: cypress/e2e/basket.cy.js
+        - cypress/run:
+            requires: 
+              - cypress/install
+            store_artifacts: true
+            spec: cypress/e2e/order.cy.js
+        - cypress/run:
+            requires: 
+              - cypress/install
+            store_artifacts: true
+            spec: cypress/e2e/shoptest.cy.js
+            parallel: true
+            parallelism: 4 
