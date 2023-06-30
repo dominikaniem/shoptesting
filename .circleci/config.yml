@@ -5,20 +5,20 @@ workflows:
   build:
     jobs:
         - cypress/install
-        - cypress/run:
+        - cypress run --record:
             requires: 
               - cypress/install
             store_artifacts: true
             spec: cypress/e2e/login.cy.js
-        - cypress/run:
+        - cypress run --record:
             requires: 
               - cypress/install
             spec: cypress/e2e/basket.cy.js
-        - cypress/run:
+        - cypress run --record:
             requires: 
               - cypress/install
             spec: cypress/e2e/order.cy.js
-        - cypress/run:
+        - cypress run --record:
             requires: 
               - cypress/install
             spec: cypress/e2e/shoptest.cy.js
