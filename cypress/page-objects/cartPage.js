@@ -3,7 +3,7 @@ import { TopRated } from "./homePage";
 
 const productName = '.product-name'
 const removeItemButton = '.remove'
-const emptyCartAlert = '.cart-empty.woocommerce-info'
+const emptyCartAlert = '.wc-block-components-notice-banner__content'
 const goToPaymentsButton = '.wc-proceed-to-checkout'
 
 
