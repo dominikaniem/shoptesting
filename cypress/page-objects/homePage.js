@@ -51,6 +51,12 @@ class HomePage {
         })
     }
 
+    addOtherProductToCart() {
+        cy.get(dataBlockNameNew).within(() => {
+            cy.get(Product.Sunglasses.Locator).click()
+        })
+    }
+
     clickGoToCartFromProductButton() {
         cy.get(dataBlockNameNew).within(() => {
             cy.get(checkCartFromProductLevel).click()

@@ -12,6 +12,7 @@ describe('it should test order', () => {
     it('should order a product', function () {
         homePage.visitPage()
         homePage.addProductToCart()
+        homePage.addOtherProductToCart()
         homePage.clickGoToCartFromProductButton()
         cartPage.checkThatAddedProductIsInCart()
         cartPage.proceedToPayment()
