@@ -4,8 +4,7 @@ orbs:
 workflows:
   use-my-orb:
     jobs:
-      cypress/run:
-        start-command: 'npm run start'
-          cypress-command: 'npx cypress run --parallel --record'
-          parallelism: 2
-        
+      - cypress/run:
+          cypress-command: npx cypress run --parallel --record
+          parallelism: 4
+          start-command: npm run start
